@@ -1,0 +1,456 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Fitbit Data Schema",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "_id": {
+        "type": "string",
+        "format": "uuid",
+        "coerce": true
+      },
+      "_created": {
+        "type": "string",
+        "format": "date-time",
+        "coerce": true
+      },
+      "_updated": {
+        "type": "string",
+        "format": "date-time",
+        "coerce": true
+      },
+      "tokens": {
+        "type": "object",
+        "properties": {
+          "access_token": { "type": "string" },
+          "expires_in": { "type": "number" },
+          "refresh_token": { "type": "string" },
+          "scope": { "type": "string" },
+          "token_type": { "type": "string" },
+          "user_id": { "type": "string" }
+        },
+        "required": [
+          "access_token",
+          "expires_in",
+          "refresh_token",
+          "scope",
+          "token_type",
+          "user_id"
+        ]
+      },
+      "profile": {
+        "type": "object",
+        "properties": {
+          "user": {
+            "type": "object",
+            "properties": {
+              "age": { "type": "number" },
+              "ambassador": { "type": "boolean" },
+              "autoStrideEnabled": { "type": "boolean" },
+              "avatar": { "type": "string", "format": "uri" },
+              "avatar150": { "type": "string", "format": "uri" },
+              "avatar640": { "type": "string", "format": "uri" },
+              "averageDailySteps": { "type": "number" },
+              "challengesBeta": { "type": "boolean" },
+              "clockTimeDisplayFormat": { "type": "string" },
+              "corporate": { "type": "boolean" },
+              "corporateAdmin": { "type": "boolean" },
+              "dateOfBirth": {
+                "type": "string",
+                "format": "date-time",
+                "coerce": true
+              },
+              "displayName": { "type": "string" },
+              "displayNameSetting": { "type": "string" },
+              "distanceUnit": { "type": "string" },
+              "encodedId": { "type": "string" },
+              "features": {
+                "type": "object",
+                "properties": {
+                  "exerciseGoal": { "type": "boolean" }
+                },
+                "required": ["exerciseGoal"]
+              },
+              "firstName": { "type": "string" },
+              "foodsLocale": { "type": "string" },
+              "fullName": { "type": "string" },
+              "gender": { "type": "string" },
+              "glucoseUnit": { "type": "string" },
+              "height": { "type": "number" },
+              "heightUnit": { "type": "string" },
+              "isBugReportEnabled": { "type": "boolean" },
+              "isChild": { "type": "boolean" },
+              "isCoach": { "type": "boolean" },
+              "languageLocale": { "type": "string" },
+              "lastName": { "type": "string" },
+              "legalTermsAcceptRequired": { "type": "boolean" },
+              "locale": { "type": "string" },
+              "memberSince": {
+                "type": "string",
+                "format": "date-time",
+                "coerce": true
+              },
+              "mfaEnabled": { "type": "boolean" },
+              "offsetFromUTCMillis": { "type": "number" },
+              "sdkDeveloper": { "type": "boolean" },
+              "sleepTracking": { "type": "string" },
+              "startDayOfWeek": { "type": "string" },
+              "strideLengthRunning": { "type": "number" },
+              "strideLengthRunningType": { "type": "string" },
+              "strideLengthWalking": { "type": "number" },
+              "strideLengthWalkingType": { "type": "string" },
+              "swimUnit": { "type": "string" },
+              "temperatureUnit": { "type": "string" },
+              "timezone": { "type": "string" },
+              "topBadges": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "badgeGradientEndColor": { "type": "string" },
+                    "badgeGradientStartColor": { "type": "string" },
+                    "badgeType": { "type": "string" },
+                    "category": { "type": "string" },
+                    "cheers": { "type": "array", "items": {} },
+                    "dateTime": {
+                      "type": "string",
+                      "format": "date-time",
+                      "coerce": true
+                    },
+                    "description": { "type": "string" },
+                    "earnedMessage": { "type": "string" },
+                    "encodedId": { "type": "string" },
+                    "image100px": { "type": "string", "format": "uri" },
+                    "image125px": { "type": "string", "format": "uri" },
+                    "image300px": { "type": "string", "format": "uri" },
+                    "image50px": { "type": "string", "format": "uri" },
+                    "image75px": { "type": "string", "format": "uri" },
+                    "marketingDescription": { "type": "string" },
+                    "mobileDescription": { "type": "string" },
+                    "name": { "type": "string" },
+                    "shareImage640px": { "type": "string", "format": "uri" },
+                    "shareText": { "type": "string" },
+                    "shortDescription": { "type": "string" },
+                    "shortName": { "type": "string" },
+                    "timesAchieved": { "type": "number" },
+                    "value": { "type": "number" },
+                    "unit": { "type": "string" }
+                  },
+                  "required": [
+                    "badgeGradientEndColor",
+                    "badgeGradientStartColor",
+                    "badgeType",
+                    "category",
+                    "cheers",
+                    "dateTime",
+                    "description",
+                    "earnedMessage",
+                    "encodedId",
+                    "image100px",
+                    "image125px",
+                    "image300px",
+                    "image50px",
+                    "image75px",
+                    "marketingDescription",
+                    "mobileDescription",
+                    "name",
+                    "shareImage640px",
+                    "shareText",
+                    "shortDescription",
+                    "shortName",
+                    "timesAchieved",
+                    "value"
+                  ]
+                }
+              },
+              "visibleUser": { "type": "boolean" },
+              "waterUnit": { "type": "string" },
+              "waterUnitName": { "type": "string" },
+              "weight": { "type": "number" },
+              "weightUnit": { "type": "string" }
+            },
+            "required": [
+              "age",
+              "ambassador",
+              "autoStrideEnabled",
+              "avatar",
+              "avatar150",
+              "avatar640",
+              "averageDailySteps",
+              "challengesBeta",
+              "clockTimeDisplayFormat",
+              "corporate",
+              "corporateAdmin",
+              "dateOfBirth",
+              "displayName",
+              "displayNameSetting",
+              "distanceUnit",
+              "encodedId",
+              "features",
+              "firstName",
+              "foodsLocale",
+              "fullName",
+              "gender",
+              "glucoseUnit",
+              "height",
+              "heightUnit",
+              "isBugReportEnabled",
+              "isChild",
+              "isCoach",
+              "languageLocale",
+              "lastName",
+              "legalTermsAcceptRequired",
+              "locale",
+              "memberSince",
+              "mfaEnabled",
+              "offsetFromUTCMillis",
+              "sdkDeveloper",
+              "sleepTracking",
+              "startDayOfWeek",
+              "strideLengthRunning",
+              "strideLengthRunningType",
+              "strideLengthWalking",
+              "strideLengthWalkingType",
+              "swimUnit",
+              "temperatureUnit",
+              "timezone",
+              "topBadges",
+              "visibleUser",
+              "waterUnit",
+              "waterUnitName",
+              "weight",
+              "weightUnit"
+            ]
+          }
+        },
+        "required": ["user"]
+      },
+      "activities": {
+        "type": "object",
+        "properties": {
+          "success": { "type": "boolean" },
+          "errors": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "errorType": { "type": "string" },
+                "message": { "type": "string" }
+              },
+              "required": ["errorType", "message"]
+            }
+          }
+        },
+        "required": ["success", "errors"]
+      },
+      "heart": {
+        "type": "object",
+        "properties": {
+          "activities-heart": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "value": {
+                  "type": "object",
+                  "properties": {
+                    "customHeartRateZones": {
+                      "type": "array",
+                      "items": {}
+                    },
+                    "heartRateZones": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "caloriesOut": { "type": "number" },
+                          "max": { "type": "number" },
+                          "min": { "type": "number" },
+                          "minutes": { "type": "number" },
+                          "name": { "type": "string" }
+                        },
+                        "required": [
+                          "caloriesOut",
+                          "max",
+                          "min",
+                          "minutes",
+                          "name"
+                        ]
+                      }
+                    },
+                    "restingHeartRate": { "type": "number" }
+                  },
+                  "required": [
+                    "customHeartRateZones",
+                    "heartRateZones",
+                    "restingHeartRate"
+                  ]
+                },
+                "dateTime": {
+                  "type": "string",
+                  "format": "date-time",
+                  "coerce": true
+                }
+              },
+              "required": ["value", "dateTime"]
+            }
+          }
+        },
+        "required": ["activities-heart"]
+      },
+      "sleep": {
+        "type": "object",
+        "properties": {
+          "sleep": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "awakeCount": { "type": "number" },
+                "awakeDuration": { "type": "number" },
+                "awakeningsCount": { "type": "number" },
+                "dateOfSleep": {
+                  "type": "string",
+                  "format": "date-time",
+                  "coerce": true
+                },
+                "duration": { "type": "number" },
+                "efficiency": { "type": "number" },
+                "endTime": {
+                  "type": "string",
+                  "format": "date-time",
+                  "coerce": true
+                },
+                "isMainSleep": { "type": "boolean" },
+                "logId": { "type": "number" },
+                "minuteData": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "dateTime": { "type": "string" },
+                      "value": { "type": "string" }
+                    },
+                    "required": ["dateTime", "value"]
+                  }
+                },
+                "minutesAfterWakeup": { "type": "number" },
+                "minutesAsleep": { "type": "number" },
+                "minutesAwake": { "type": "number" },
+                "minutesToFallAsleep": { "type": "number" },
+                "restlessCount": { "type": "number" },
+                "restlessDuration": { "type": "number" },
+                "startTime": {
+                  "type": "string",
+                  "format": "date-time",
+                  "coerce": true
+                },
+                "timeInBed": { "type": "number" }
+              },
+              "required": [
+                "awakeCount",
+                "awakeDuration",
+                "awakeningsCount",
+                "dateOfSleep",
+                "duration",
+                "efficiency",
+                "endTime",
+                "isMainSleep",
+                "logId",
+                "minuteData",
+                "minutesAfterWakeup",
+                "minutesAsleep",
+                "minutesAwake",
+                "minutesToFallAsleep",
+                "restlessCount",
+                "restlessDuration",
+                "startTime",
+                "timeInBed"
+              ]
+            }
+          },
+          "summary": {
+            "type": "object",
+            "properties": {
+              "stages": {
+                "type": "object",
+                "properties": {
+                  "deep": { "type": "number" },
+                  "light": { "type": "number" },
+                  "rem": { "type": "number" },
+                  "wake": { "type": "number" }
+                },
+                "required": ["deep", "light", "rem", "wake"]
+              },
+              "totalMinutesAsleep": { "type": "number" },
+              "totalSleepRecords": { "type": "number" },
+              "totalTimeInBed": { "type": "number" }
+            },
+            "required": [
+              "stages",
+              "totalMinutesAsleep",
+              "totalSleepRecords",
+              "totalTimeInBed"
+            ]
+          }
+        },
+        "required": ["sleep", "summary"]
+      },
+      "steps": {
+        "type": "object",
+        "properties": {
+          "activities-steps": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "dateTime": {
+                  "type": "string",
+                  "format": "date-time",
+                  "coerce": true
+                },
+                "value": { "type": "string" }
+              },
+              "required": ["dateTime", "value"]
+            }
+          }
+        },
+        "required": ["activities-steps"]
+      },
+      "calories": {
+        "type": "object",
+        "properties": {
+          "activities-calories": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "dateTime": {
+                  "type": "string",
+                  "format": "date-time",
+                  "coerce": true
+                },
+                "value": { "type": "string" }
+              },
+              "required": ["dateTime", "value"]
+            }
+          }
+        },
+        "required": ["activities-calories"]
+      },
+      "weight": {
+        "type": "object",
+        "properties": {
+          "weight": {
+            "type": "array",
+            "items": { "type": "object" }
+          }
+        },
+        "required": ["weight"]
+      }
+    },
+    "required": ["_id"],
+    "additionalProperties": false
+  }
+}
