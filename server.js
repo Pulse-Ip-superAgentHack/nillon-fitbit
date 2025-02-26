@@ -6,7 +6,8 @@ import { orgConfig } from "./orgConfig.js";
 
 const app = express();
 const port = 3000;
-const SCHEMA_ID = "3f35a54a-3ea3-4910-a7f5-b36248dc659f";
+// Use your desired SCHEMA_ID; this example uses a different one than your main snippet
+const SCHEMA_ID = "6f28bcf5-a23f-4ec5-a085-23271c24f6e4";
 
 app.use(cors());
 app.use(bodyParser.json());

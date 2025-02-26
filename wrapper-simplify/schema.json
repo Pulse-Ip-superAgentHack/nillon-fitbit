@@ -13,6 +13,13 @@
       "user_id": { "type": "string" },
       "firstName": { "type": "string" },
       "lastName": { "type": "string" },
+      "age": {
+        "type": "object",
+        "properties": {
+          "%share": { "type": "string" }
+        },
+        "required": ["%share"]
+      },
       "steps": { "type": "number" },
       "restingHeartRate": { "type": "number" },
       "calories": { "type": "number" },
