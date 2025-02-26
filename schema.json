@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "Fitbit Data Schema",
+  "title": "Fitbit Data Schema (Updated)",
   "type": "array",
   "items": {
     "type": "object",
@@ -45,7 +45,13 @@
           "user": {
             "type": "object",
             "properties": {
-              "age": { "type": "number" },
+              "age": {
+                "type": "object",
+                "properties": {
+                  "%share": { "type": "string" }
+                },
+                "required": ["%share"]
+              },
               "ambassador": { "type": "boolean" },
               "autoStrideEnabled": { "type": "boolean" },
               "avatar": { "type": "string", "format": "uri" },
